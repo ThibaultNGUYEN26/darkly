@@ -1,8 +1,0 @@
-Cookies:
-  - name: I_am_admin
-  - value: b326b5062b2f0e69046810717534cb09
-
-Decrypt MD5 code: b326b5062b2f0e69046810717534cb09 -> false
-Encrypt MD5 code: true -> b326b5062b2f0e69046810717534cb09
-
-Decoder: https://www.dcode.fr/md5-hash
