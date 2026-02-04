@@ -1,0 +1,9 @@
+MD5 is a cryptographic hash function that transforms data (file, password, etc.) into a unique 128-bit digital fingerprint, typically represented by a 32-character hexadecimal string.
+This fingerprint allows you to verify the integrity of the data: any modification to the original data produces a different fingerprint.
+
+We could recognize a MD5 code because of its shape:
+  - 32 characters
+  - All characters are hex (0-9 and a-f)
+  - That’s the standard text form of a 128-bit hash, and MD5 is the most common 128-bit hash shown this way.
+
+After testing we could decode false
