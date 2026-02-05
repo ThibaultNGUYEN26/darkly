@@ -27,3 +27,18 @@ http://10.13.200.245/index.php?page=signin&password={password}&Login=Login
 4. When `flag` appears in the response, the correct password is found
 5. Successfully found the password: `shadow`
 6. Successfully obtained the flag
+
+## Why Does This Happen?
+
+1. **No rate limiting**: The server allows unlimited login attempts without delays or blocks
+2. **Missing account lockout**: No mechanism to lock accounts after failed attempts
+3. **No CAPTCHA**: No challenge-response test to prevent automated attacks
+4. **Weak password**: Using common dictionary words makes brute force attacks trivial
+
+## How to Prevent It
+
+1. **Implement rate limiting**: Limit login attempts per IP address and per account
+2. **Add account lockout**: Temporarily lock accounts after a threshold of failed attempts
+3. **Use CAPTCHA**: Implement CAPTCHA after several failed login attempts
+4. **Enforce strong passwords**: Require complex passwords that resist dictionary attacks
+5. **Add delays**: Introduce progressive delays after each failed attempt

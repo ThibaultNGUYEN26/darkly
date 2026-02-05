@@ -71,3 +71,18 @@ Surname: 5ff9d0165b4f92b14994e5c685cdce28
 
 - Submit the SHA-256 hash as the flag
 - Successfully obtained the flag
+
+## Why Does This Happen?
+
+1. **Unsanitized user input**: The application directly uses user input in SQL queries
+2. **No parameterized queries**: SQL queries are built using string concatenation
+3. **Excessive database permissions**: Application has access to information_schema
+4. **Error messages expose structure**: Database errors reveal table and column names
+
+## How to Prevent It
+
+1. **Use parameterized queries**: Always use prepared statements with bound parameters
+2. **Input validation**: Validate and sanitize all user inputs before use
+3. **Principle of least privilege**: Limit database user permissions to only what's needed
+4. **Use an ORM**: Object-Relational Mapping frameworks provide built-in SQL injection protection
+5. **Disable detailed errors**: Don't expose database error messages to users

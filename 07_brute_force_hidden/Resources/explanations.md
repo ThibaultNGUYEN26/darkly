@@ -20,3 +20,18 @@
 3. Save all README contents to `output.log`
 4. Search through the output log to find the flag among the content
 5. Successfully obtained the flag
+
+## Why Does This Happen?
+
+1. **Information disclosure via robots.txt**: Sensitive directories are listed in publicly accessible robots.txt
+2. **Directory listing enabled**: Web server allows browsing of directory contents
+3. **No access controls**: Hidden directories are accessible without authentication
+4. **Security through obscurity**: Relying on "hidden" paths instead of proper access controls
+
+## How to Prevent It
+
+1. **Don't list sensitive paths in robots.txt**: Use proper authentication instead of obscurity
+2. **Disable directory listing**: Configure web server to prevent directory browsing
+3. **Implement authentication**: Require login credentials to access sensitive areas
+4. **Use proper access controls**: Set file permissions and use .htaccess or server configs
+5. **Remove sensitive files**: Don't store sensitive data in web-accessible directories

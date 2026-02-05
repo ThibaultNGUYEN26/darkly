@@ -28,3 +28,18 @@ echo '<?php echo "Darkly" ?>' > 05_upload_image/script.php && curl -X POST \
 
 3. The server accepts the upload because we specified `type=image/jpeg`, even though it's a PHP script
 4. Successfully obtained the flag
+
+## Why Does This Happen?
+
+1. **Insufficient file validation**: Server only checks the Content-Type header, not actual file content
+2. **Trust in client data**: The application trusts the MIME type provided by the client
+3. **No file extension verification**: Server doesn't validate that the file extension matches content
+4. **Missing magic byte checking**: No verification of file signatures (magic bytes) to confirm file type
+
+## How to Prevent It
+
+1. **Validate file content**: Check magic bytes/file signatures, not just headers or extensions
+2. **Use a whitelist**: Only allow specific, safe file types (jpg, png, gif)
+3. **Rename uploaded files**: Store files with random names and safe extensions
+4. **Store outside web root**: Keep uploaded files in a non-executable directory
+5. **Disable script execution**: Configure server to prevent execution of scripts in upload directories
