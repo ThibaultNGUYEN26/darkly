@@ -10,4 +10,8 @@
 - **Issue**: Social media links can be manipulated to redirect users to malicious sites
 - **Example**: Changed Facebook redirection to Google
 
-By modifying the redirection URL, we found the flag.
+## Exploitation
+
+1. Modify the social media link redirection URL
+2. Change the target URL (e.g., from Facebook to Google)
+3. Successfully obtained the flag

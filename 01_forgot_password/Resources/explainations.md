@@ -15,4 +15,8 @@
 - **Issue**: Hidden input field contains a sensitive email value
 - **Email exposed**: `webmaster@borntosec.com`
 
-We put another value and found the flag.
+## Exploitation
+
+1. Modify the hidden input field value to another email address
+2. Submit the password reset form
+3. Successfully obtained the flag
