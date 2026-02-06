@@ -5,7 +5,7 @@
 1. Notice an image on the main page that can be clicked
 2. Click on the image and observe the URL redirect:
 ```
-http://10.13.200.245/?page=media&src=nsa
+http://10.11.200.35/?page=media&src=nsa
 ```
 3. Identified that the `src` parameter controls the image source
 
@@ -24,7 +24,7 @@ http://10.13.200.245/?page=media&src=nsa
 
 2. Replace the `src` parameter with the data URI:
 ```
-http://10.13.200.245/?page=media&src=data:text/html;base64,PHNjcmlwdD5hbGVydCgndGVzdCcpPC9zY3JpcHQ+
+http://10.11.200.35/?page=media&src=data:text/html;base64,PHNjcmlwdD5hbGVydCgndGVzdCcpPC9zY3JpcHQ+
 ```
 
 3. Navigate to the crafted URL

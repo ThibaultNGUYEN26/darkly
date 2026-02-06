@@ -1,6 +1,6 @@
 import requests
 
-BASE_URL = "http://10.13.200.245"
+BASE_URL = "http://10.11.200.35"
 PAGE_PARAM = "?page="
 
 def test_lfi(depth):

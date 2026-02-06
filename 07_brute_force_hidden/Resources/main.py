@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 import time
 import os
 
-BASE_URL = "http://10.13.200.245/.hidden/"
+BASE_URL = "http://10.11.200.35/.hidden/"
 LOG_FILE = os.path.join(os.path.dirname(__file__), "output.log")
 
 def log_to_file(message):

